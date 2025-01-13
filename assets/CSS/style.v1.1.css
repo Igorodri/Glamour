@@ -1,0 +1,1245 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Playwrite+DE+LA+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: calc(60vh - 60px);
+    position: relative;
+    z-index: 1; 
+    margin-top: 5%;
+}
+
+section h2{
+    text-align: center;
+    font-family: "Parkinsans", sans-serif;
+}
+
+section h3{
+    font-family: "Dancing Script", serif;
+}
+
+section p{
+    margin: 2% 15%;
+    text-align: center;
+    font-family: "Parkinsans", sans-serif;
+}
+
+:target {
+    scroll-margin-top: 200px
+}
+
+
+
+/*HEADER*/
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: white; 
+    box-shadow: 0px 5px 25px 6px rgba(0, 0, 0, 0.2);
+    height: 200px;
+}
+
+#navbar {
+    text-align: center;
+}
+
+#nav_logo img {
+    width: 150px;
+    margin-bottom: -25px;
+}
+
+#nav_list {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    list-style: none;
+    flex: 1; 
+}
+
+.nav-item {
+    margin: 0 20px; 
+    margin-top: -35px;
+    margin-bottom: 40px;
+}
+
+.nav-item a{
+    font-family: "Parkinsans", sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.nav-item.active a{
+    color: #c0c0c0;
+    border-bottom: 3px solid black;
+}
+
+.nav-item a:hover{
+    color: #c0c0c0;
+    transition: 0.5s;
+}
+
+.area-button-pedido{
+    display: flex;
+    justify-content: end;
+}
+
+#carrinho{
+    transition: 0.5s;
+    width: 35px;
+    height: 35px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+#carrinho:hover{
+    transition: 0.5s;   
+    transform: scale(1.1) translateY(5px);
+}
+
+#carrinho-mobile{
+    display: none;
+    transition: 0.5s;
+    width: 35px;
+    height: 35px;
+}
+
+#carrinho-mobile:hover{
+    display: none;
+    transition: 0.5s;   
+    transform: scale(1.1) translateY(5px);
+}
+
+#btn-default_mobile{
+    display: none;
+}
+
+.mobile_menu{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        height: 120px;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;
+    }
+
+    #nav_list{
+        display: none;
+    }
+
+    #nav_logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    #nav_logo img {
+        width: 170px;
+        margin-left: 25%;
+        margin-top: -50px;
+    }
+
+    #nav_logo #logo{
+        margin-top: -30px
+    }
+
+    #btn-default_mobile{
+        display: block;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: #c0c0c0; 
+        padding: 10px 10px 10px 10px;
+        border-radius: 10px;
+        margin-right: 15px;
+        height: 55px;
+    }
+
+    #btn-default_mobile:hover {
+        background-color: #e1dede; 
+        color: white;
+        transition: background-color 0.3s ease; 
+    }
+
+    .mobile_menu{
+        background-color: #c0c0c0;
+        padding-top: 10px;
+        padding-bottom: 1px;
+    }
+
+    #img-mobile-btn{
+        width: 20px;
+        height: 20px;
+        color: white;
+        margin-right: 4px;
+    }
+
+    .nav-item{
+        list-style: none;
+        text-align: center;
+        margin-right: 54px;
+        margin-top: -15px;
+    }
+
+    .nav-item a{
+        color: white;
+    }
+
+    .nav-item a:hover{
+        color: #888888;
+    }
+
+    #nav-item-carrinho{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #carrinho{
+        display: none;
+    }
+    
+    #carrinho:hover{
+        display: none;
+    }
+    
+    #carrinho-mobile{
+        display: block;
+        text-align: center;
+    }
+    
+    #carrinho-mobile:hover{
+        display: block;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    header{
+        height: 135px;
+    }
+
+    #nav_logo img {
+        width: 160px;
+        margin-bottom: -50px;
+        margin-top: -35px;
+    }
+
+    .nav-item a{
+        font-size: 14px;
+    }
+
+
+    #carrinho{
+        transition: 0.5s;
+        width: 30px;
+        height: 30px;
+        margin-right: 100px;
+    }
+    
+    #carrinho:hover{
+        transition: 0.5s;   
+        transform: scale(1.1) translateY(5px);
+    }
+    
+}
+
+
+
+/*Home*/
+#section-home{
+    margin-top: -15px;;
+    background-color: #c0c0c0;
+    padding-bottom: 2%;
+}
+
+#section-home h2{
+    color: white;
+    font-family: "Dancing Script", serif;
+    font-size: 30px;
+    margin-top: -50px;;
+}
+
+#section-home h1{
+    font-size: 200px;
+    font-family: "Dancing Script", serif;
+    color: white;
+    margin-right: 10%;
+    margin-top: 250px;
+}
+
+#container-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#container-imagem{
+    margin-right: -150px;
+    
+}
+
+#container-imagem img{
+    width: 500px;
+}
+
+@media screen and (max-width: 768px){
+    #section-home{
+        margin-top: -20px;
+        background-color: #c0c0c0;
+        padding-bottom: 20px;
+    }
+    
+    #section-home h2{
+        color: white;
+        font-family: "Dancing Script", serif;
+        font-size: 21px;
+        margin-top: -50px;
+    }
+    
+    #section-home h1{
+        font-size: 100px;
+        font-family: "Dancing Script", serif;
+        color: white;
+        margin-right: 0;
+        margin-top: -70px;
+    }
+    
+    #container-home{
+        display: block;
+        text-align: center;
+        margin-top: 2px;
+    }
+    
+    #container-imagem{
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        
+    }
+    
+    #container-imagem img{
+        width: 400px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    #section-home{
+        margin-top: -60px;
+        background-color: #c0c0c0;
+        padding-bottom: 30px;
+    }
+    
+    #section-home h2{
+        color: white;
+        font-family: "Dancing Script", serif;
+        font-size: 30px;
+    }
+    
+    #section-home h1{
+        font-size: 150px;
+        font-family: "Dancing Script", serif;
+        color: white;
+        margin-right: 10%;
+        margin-top: 15%;
+    }
+    
+    #container-home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+    
+    #container-imagem{
+        margin-right: -10.5%;
+        
+    }
+    
+    #container-imagem img{
+        width: 500px;
+    }
+}
+
+
+
+/*SERVICO*/
+#section-servico{
+    margin-top: 120px;
+}
+
+#area-box-servico{
+    display: grid;
+    grid-template-columns: max-content;
+    justify-content: center;
+}
+
+#box-servico{
+    background-color: #c0c0c0; 
+    color: white;
+    border: 1px solid rgb(195, 195, 195); 
+    width: 600px;
+    height: 50px;
+    margin-top: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#box-servico:hover {
+    transition: 0.2s;
+    height: 180px;
+}
+
+#box-servico:hover h3 {
+    transition: 0.2s;
+    margin-top: -50px;
+}
+
+#box-servico:hover p {
+    margin-top: 30px;
+    display: block;
+}
+
+#box-servico h3{
+    text-align: center;
+    margin-top: -50px;
+    font-size: 22px;
+}
+
+#box-servico p{
+    text-align: justify;
+    margin: 0px 20px 0 20px;
+    display: none;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.logo_box_servico{
+    width: 45px;
+    background-color: white;
+    border-right: 5px solid rgb(195, 195, 195); 
+    border-bottom: 5px solid rgb(195, 195, 195);
+    padding: 4px;
+}
+
+
+@media screen and (max-width: 768px){
+    #section-servico{
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    #box-servico{
+        width: 310px;
+        height: 50px;
+        border: 1px solid rgb(195, 195, 195); 
+    }
+
+    #box-servico h3{
+        margin-left: 40px;
+        font-size: 18px;
+    }   
+    
+    #box-servico p{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .logo_box_servico{
+        width: 45px;
+        background-color: white;
+        border-right: 5px solid white; 
+        border-bottom: 5px solid white;
+        padding: 4px;
+    }
+    
+}
+
+
+@media (min-width: 769px) and (max-width: 1366px) {
+
+}
+
+
+
+
+/*LOJA*/
+#section-loja {
+    background-color: #c0c0c0;
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#section-loja img{
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+#area-box-loja{
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slide:nth-child(1) {
+    background-image: url('/assets/IMG/loja.jpg');
+  }
+  .slide:nth-child(2) {
+    background-image: url('/assets/IMG/loja-2.jpg');
+  }
+  .slide:nth-child(3) {
+    background-image: url('/assets/IMG/loja-3.jpg');
+  }
+
+  .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .control {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 30px;
+  }
+
+  .control:hover {
+    background: rgba(194, 193, 193, 0.318);
+  }
+
+
+@media screen and (max-width: 768px){
+    #section-loja {
+        padding-top: 10px;
+    }
+    
+    #section-loja img{
+        margin-top: 30px;
+        width: 350px;
+        height: 220px;
+    }
+    
+}
+
+
+@media (min-width: 769px) and (max-width: 1366px) {
+/*///*/
+}
+
+
+/*PRODUTOS*/
+.div-produtos-container{
+    display: flex;
+    justify-content: center;
+}
+
+.produto-container{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 400px;
+    height: 530px;
+}
+
+.produto{
+    width: 400px;
+    height: 530px;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.produto-container:hover{
+    transform: scale(1.05) translateY(15px);
+    transition: 0.5s;
+    filter: grayscale(0.5);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 20px; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    font-family: "Parkinsans", sans-serif; 
+  }
+
+
+  .produto-container:hover .overlay-text {
+    opacity: 1; /* Mostra o texto */
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+
+
+
+#container-masculino{
+    display: none;
+    justify-content: center;
+  }
+
+  #container-masculino h2{
+    margin-top: 70px;
+}
+
+  #container-masculino button{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: #979797;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #container-masculino button:hover{
+    background-color: #FD1D1D;
+    transition: 0.2s;
+  }
+
+  .area-opcoes-masculino {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(3, 3fr);
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: -300px;
+  }
+  
+  .box-opcoes-masculino {
+    width: 350px;
+    height: 400px;
+    border: 1px solid black;
+    background-color: #c0c0c0;
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .box-opcoes-masculino p{
+    transition: 0.5s;
+    margin-top: 20px;
+    color: white;
+  }
+
+  .img-opcoes-masculino{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid black;
+    transition: 0.5s;
+    border-radius: 10px;
+  }
+
+  .box-opcoes-masculino:hover .img-opcoes-masculino{
+    height: 330px;
+    transition: 0.5s;
+  }
+
+
+  #imagem-masculino-1{
+    background-image: url('/assets/IMG/moda-masculina/foto-moda-masculina-1.jpg');
+  }
+
+  #imagem-masculino-2{
+    background-image: url('/assets/IMG/moda-masculina/foto-moda-masculina-2.jpg');
+  }
+
+  #imagem-masculino-3{
+    background-image: url('/assets/IMG/moda-masculina/foto-moda-masculina-3.jpg');
+  }
+
+  #imagem-masculino-4{
+    background-image: url('/assets/IMG/moda-masculina/foto-moda-masculina-5.jpg');
+  }
+
+  #imagem-masculino-5{
+    background-image: url('/assets/IMG/moda-masculina/foto-moda-masculina-6.jpg');
+  }
+
+  #imagem-masculino-6{
+    background-image: url('/assets/IMG/moda-masculina/foto-moda-masculina-7.jpg');
+  }
+
+
+
+
+
+#container-feminino {
+    display: none;
+    justify-content: center;
+}
+
+#container-feminino h2{
+    margin-top: 70px;
+}
+
+#container-feminino button {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: #979797;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#container-feminino button:hover{
+    transition: 0.2s;
+    background-color: #FD1D1D;
+}
+
+
+  .area-opcoes-feminino{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(3, 3fr);
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: -300px;
+  }
+
+  .box-opcoes-feminino{
+    width: 350px;
+    height: 400px;
+    border: 1px solid black;
+    background-color: #c0c0c0;
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .box-opcoes-feminino p{
+    margin-top: 20px;
+    color: white;
+  }
+
+  .img-opcoes-feminino{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid black; 
+    transition: 0.5s;
+    border-radius: 10px;
+  }
+
+  .box-opcoes-feminino:hover .img-opcoes-feminino{
+    height: 330px;
+    transition: 0.5s;
+  }
+
+
+
+  #imagem-feminino-1{
+    background-image: url('/assets/IMG/moda-feminina/foto-moda-feminina-1.jpg');
+  }
+
+  #imagem-feminino-2{
+    background-image: url('/assets/IMG/moda-feminina/foto-moda-feminina-2.jpg');
+  }
+
+  #imagem-feminino-3{
+    background-image: url('/assets/IMG/moda-feminina/foto-moda-feminina-3.jpg');
+  }
+
+  #imagem-feminino-4{
+    background-image: url('/assets/IMG/moda-feminina/foto-moda-feminina-4.jpg');
+  }
+
+  #imagem-feminino-5{
+    background-image: url('/assets/IMG/moda-feminina/foto-moda-feminina-6.jpg');
+  }
+
+  #imagem-feminino-6{
+    background-image: url('/assets/IMG/moda-feminina/foto-moda-feminina-7.jpg');
+  }
+
+
+  @media screen and (max-width: 768px){
+    .div-produtos-container{
+        display: block;
+        text-align: center;
+    }
+    
+    .produto-container{
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        transition: 0.5s;
+        margin-top: 5%;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 300px;
+        height: 450px;
+    }
+    
+    .produto{
+        width: 300px;
+        height: 450px;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    
+    .produto-container:hover{
+        transform: scale(1.02) translateY(15px);
+        transition: 0.5s;
+        filter: grayscale(0.5);
+    }
+    
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white; 
+        font-size: 20px; 
+        font-weight: bold; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        opacity: 0; 
+        transition: opacity 0.3s ease;
+        font-family: "Parkinsans", sans-serif; 
+      }
+    
+    
+      .produto-container:hover .overlay-text {
+        opacity: 1; 
+      }
+
+
+      .area-opcoes-feminino{
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        grid-template-rows: repeat(1, 3fr);
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 100px;
+      }
+
+      .area-opcoes-masculino{
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        grid-template-rows: repeat(1, 3fr);
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 100px;
+      }
+
+      .box-opcoes-feminino{
+        width: 300px;
+        height: 400px;
+      }
+
+      .box-opcoes-masculino{
+        width: 300px;
+        height: 400px;
+      }
+    }
+@media (min-width: 769px) and (max-width: 1366px) {
+    .box-opcoes-feminino{
+        width: 280px;
+        height: 400px;
+      }
+
+      .box-opcoes-masculino{
+        width: 280px;
+        height: 400px;
+      }
+
+      .div-produtos-container{
+        display: block;
+        text-align: center;
+    }
+    
+    .produto-container{
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        transition: 0.5s;
+        margin-top: 5%;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 300px;
+        height: 450px;
+    }
+    
+    .produto{
+        width: 300px;
+        height: 450px;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    
+    .produto-container:hover{
+        transform: scale(1.02) translateY(15px);
+        transition: 0.5s;
+        filter: grayscale(0.5);
+    }
+    
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white; 
+        font-size: 20px; 
+        font-weight: bold; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        opacity: 0; 
+        transition: opacity 0.3s ease;
+        font-family: "Parkinsans", sans-serif; 
+      }
+    
+}
+    
+
+
+
+
+
+/*EQUIPE*/
+#section-equipe{
+    background-color: #c0c0c0; 
+    padding-top: 50px;
+    color: white;
+    padding-bottom: 50px;
+}
+
+#area-box-equipe{
+    display: flex;
+    justify-content: center;
+}
+
+.box-equipe{
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#background-imagem-1{
+    width: 100%;
+    height: 330px;
+    background-image: url('/assets/IMG/andre-sallos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#background-imagem-2{
+    width: 100%;
+    height: 330px;
+    background-image: url('/assets/IMG/vanessa-nunes.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#background-imagem-3{
+    width: 100%;
+    height: 330px;
+    background-image: url('/assets/IMG/mauricio-fonseca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#background-imagem-4{
+    width: 100%;
+    height: 330px;
+    background-image: url('/assets/IMG/henrique-ullis.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#background-imagem-5{
+    width: 100%;
+    height: 330px;
+    background-image: url('/assets/IMG/fabio-maranhao].jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nome{
+    font-size: 23px;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+
+.cargo{
+    font-size: 21px;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    #section-equipe {
+        padding-top: 10px;
+    }
+    
+    #area-box-equipe{
+        display: grid;
+        text-align: center;
+    }
+
+    .box-equipe{
+        width: 270px;
+        height: 350px;
+        margin-right: 0px;
+        margin-top: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    #background-imagem-1,#background-imagem-2,
+    #background-imagem-3,#background-imagem-4,#background-imagem-5{
+        width: 270px;
+        height: 250px;
+        border-bottom: 1px solid black;
+    }
+
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1366px) {
+
+    #area-box-equipe{
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 10px; 
+        width: 100%; 
+        max-width: 600px; 
+        margin: auto;
+        justify-items: center; 
+        align-items: center; 
+        place-items: center; 
+    }
+
+    .box-equipe{
+        width: 280px;
+        height: 450px;
+        background-color: white;
+        margin-right: 15px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+}
+
+
+
+/*CONTATO*/
+
+#area-contato{
+    display: grid;
+    place-items: center; /* Centraliza horizontal e verticalmente */
+    text-align: center;
+}
+
+#area-contato a{
+    color: black;
+    text-decoration: none;
+}
+
+#box-contato{
+    width: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.whatsapp:hover{
+    transition: 0.5s;
+    background-color: #25D366;
+    color: white;
+    border: none;
+}
+
+.instagram:hover{
+    transition: 0.5s;
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+    color: white;
+    border: none;
+}
+
+.email:hover{
+    transition: 0.5s;
+    background-color: #259fd3;
+    color: white;
+    border: none;
+}
+
+.localizacao:hover{
+    transition: 0.5s;
+    background-color: #ff2929;
+    color: white;
+    border: none;
+}
+
+
+@media screen and (max-width: 768px){
+ 
+    #box-contato{
+        width: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0.px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        border-radius: 5px;
+        transition: 0.5s;
+        font-size: 26px;
+    }
+    
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    #contato{
+        margin-bottom: 120px;
+    }
+
+}
+
+
+
+
+/*FOOTER*/
+footer {
+    background-color: #c0c0c0;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Parkinsans", sans-serif;
+    font-size: 14px;
+    box-shadow: 0px -5px 25px 6px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+ /*  */
+}
+
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    footer {
+        margin-top: 50px;
+    }
+}
