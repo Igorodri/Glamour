@@ -250,7 +250,7 @@ header{
     #nav_logo img {
         width: 160px;
         margin-bottom: -50px;
-        margin-top: -75px;
+        margin-top: -35px;
     }
 
     .nav-item a{
@@ -690,8 +690,8 @@ header{
     background-color: #c0c0c0;
     color: black;
     text-align: center;
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-top: 15px;
+    margin-right: 10px;
     cursor: pointer;
     border-radius: 10px;
   }
@@ -792,8 +792,8 @@ header{
     background-color: #c0c0c0;
     color: black;
     text-align: center;
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-top: 15px;
+    margin-right: 10px;
     cursor: pointer;
     border-radius: 10px;
   }
